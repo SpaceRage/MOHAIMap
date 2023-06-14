@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#map {
+    height: 100vh;
+}
+
+#settings {
+    left: -45%;
+    transition: left 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+    -webkit-transition: left 0.25s ease,
+        color 0.25s ease,
+        background-color 0.25s ease;
+    -moz-transition: left 0.25s ease,
+        color 0.25s ease,
+        background-color 0.25s ease;
+    -o-transition: left 0.25s ease,
+        color 0.25s ease,
+        background-color 0.25s ease;
+    /*transition: color 0.25s ease;
+    transition: background-color 0.25s ease;*/
+}
+
+#layers {
+    right: -45%;
+    transition: right 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+    -webkit-transition: right 0.25s ease,
+        color 0.25s ease,
+        background-color 0.25s ease;
+    -moz-transition: right 0.25s ease,
+        color 0.25s ease,
+        background-color 0.25s ease;
+    -o-transition: right 0.25s ease,
+        color 0.25s ease,
+        background-color 0.25s ease;
+    /*transition: color 0.25s ease;
+    transition: background-color 0.25s ease;*/
+}
+
+
+#settings:hover {
+    left: -10%;
+}
+
+#layers:hover {
+    right: -10%;
+}
