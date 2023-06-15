@@ -11,7 +11,21 @@ var tribes = {
             about: {
                 "photo": "duwamishmain.f4ba586a.png",
                 "blurb": null
-            }
+            },
+            people: [
+                {
+                    "name": "Chief Seattle",
+                    "photo": "seattle.1f2b8b5a.png",
+                    "blurb": null
+                }
+            ],
+            artifacts: [
+                {
+                    "name": null,
+                    "photo": null,
+                    "blurb": null
+                }
+            ]
         },
         geometry: { type: "Point", coordinates: [-122.335, 47.526] }
     }]

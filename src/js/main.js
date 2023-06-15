@@ -39,3 +39,49 @@ function setInfo() {
     console.log(currentPanel['about']['photo']);
     document.getElementById("aboutphoto").src = currentPanel['about']['photo'];
 }
+
+// Info panel navigation
+
+var abouttab = document.getElementById("abouttab");
+var peopletab = document.getElementById("peopletab");
+var artifactstab = document.getElementById("artifactstab");
+var exhibittab = document.getElementById("exhibittab");
+
+var about = document.getElementById("about");
+var people = document.getElementById("people");
+var artifacts = document.getElementById("artifacts");
+var exhibit = document.getElementById("exhibit");
+
+// Default
+about.style.display = "block";
+people.style.display = "none";
+artifacts.style.display = "none";
+exhibit.style.display = "none";
+
+abouttab.onclick = function () {
+    about.style.display = "block";
+    people.style.display = "none";
+    artifacts.style.display = "none";
+    exhibit.style.display = "none";
+}
+
+peopletab.onclick = function () {
+    about.style.display = "none";
+    people.style.display = "block";
+    artifacts.style.display = "none";
+    exhibit.style.display = "none";
+}
+
+artifactstab.onclick = function () {
+    about.style.display = "none";
+    people.style.display = "none";
+    artifacts.style.display = "block";
+    exhibit.style.display = "none";
+}
+
+exhibittab.onclick = function () {
+    about.style.display = "none";
+    people.style.display = "none";
+    artifacts.style.display = "none";
+    exhibit.style.display = "block";
+}

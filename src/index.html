@@ -15,23 +15,34 @@
 
   <div id="infopanel" class="m-0 z-20 fixed h-1/2 w-full -bottom-2/3 bg-gray-500 text-center text-md">
     <div class="absolute w-full h-[10%] -top-5 flex flex-row">
-      <div class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-white">
+      <a id="abouttab" tabindex="0"
+        class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-gray-700 text-white hover:bg-gray-300 focus:bg-white focus:text-black">
         <h1>About</h1>
-      </div>
-      <div class="h-full p-2 basis-1/4 rounded-t-2xl bg-gray-500 text-white">
+      </a>
+      <a id="peopletab" tabindex="0"
+        class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-gray-700 text-white hover:bg-gray-300 focus:bg-white focus:text-black">
         <h1>People</h1>
-      </div>
-      <div class="h-full p-2 basis-1/4 rounded-t-2xl bg-gray-500 text-white">
+      </a>
+      <a id="artifactstab" tabindex="0"
+        class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-gray-700 text-white hover:bg-gray-300 focus:bg-white focus:text-black">
         <h1>Artifacts</h1>
-      </div>
-      <div class="h-full p-2 basis-1/4 rounded-t-2xl bg-gray-500 text-white">
+      </a>
+      <a id="exhibittab" tabindex="0"
+        class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-gray-700 text-white hover:bg-gray-300 focus:bg-white focus:text-black">
         <h1>Exhibit</h1>
-      </div>
+      </a>
     </div>
     <div id="about" class="absolute w-full h-full top-5 flex flex-row bg-white">
-      <div>
-        <img id="aboutphoto" src="img\tribes\duwamish\main\duwamishmain.png" class="h-full">
-      </div>
+      <img id="aboutphoto" src="img\tribes\duwamish\main\duwamishmain.png" class="h-full">
+    </div>
+    <div id="people" class="absolute w-full h-full top-5 flex flex-row bg-white">
+      <img id="peoplephoto" src="#" class="h-full">
+    </div>
+    <div id="artifacts" class="absolute w-full h-full top-5 flex flex-row bg-white">
+      <img id="artifactphoto" src="img\tribes\duwamish\main\duwamishmain.png" class="h-full">
+    </div>
+    <div id="exhibit" class="absolute w-full h-full top-5 flex flex-row bg-white">
+      <img id="exhibitphoto" src="#" class="h-full">
     </div>
   </div>
 

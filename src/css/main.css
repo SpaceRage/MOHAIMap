@@ -61,3 +61,7 @@
     box-shadow: none;
     border-width: 40px;
 }
+
+#abouttab:active {
+    background-color: white;
+}
