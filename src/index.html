@@ -13,17 +13,17 @@
 
 <body class="bg-twilight">
 
-  <!--div id="infopanel" class="z-20 fixed h-1/2 w-full bottom-0 p-4 bg-white text-center text-md"--></div>
+  <div id="infopanel" class="z-20 fixed h-1/2 w-full -bottom-1/2 p-4 bg-white text-center text-md"></div>
 
   <div id="settings"
     class="z-10 fixed h-full w-[50%] -left-[45%] top-0 p-4 bg-mohai hover:bg-white text-white hover:text-mohai rounded-r-3xl md:rounded-r-[50px] text-center text-md">
     <h1 class="absolute -rotate-90 inset-y-1/2 -right-[1%] text-4xl tracking-widest align-text-top">
       SETTINGS</h1>
-    <ul class="absolute right-[30%] top-[40%] text-gray-800 text-2xl space-y-2 text-left">
-      <li>Satellite</li>
-      <li>Dark Mode</li>
-      <li>High Contrast</li>
-      <li>Global Narration</li>
+    <ul class="absolute right-[30%] top-[43%] text-gray-800 text-2xl space-y-2 text-left">
+      <li><input id="satellite" type="checkbox" onclick="mapChange()">Satellite</li>
+      <li><input type="checkbox">Dark Mode</li>
+      <li><input type="checkbox">High Contrast</li>
+      <li><input type="checkbox">Global Narration</li>
     </ul>
   </div>
 
@@ -35,6 +35,7 @@
 
 
   <div id="map" class="z-0"></div>
+  <script src="./js/tribes.js"></script>
   <script src="./js/map.js"></script>
   <script src="./js/main.js"></script>
 
