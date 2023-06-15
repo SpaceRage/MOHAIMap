@@ -13,7 +13,7 @@ map.on('click', function () {
     layers.style.right = "-45%";
     layers.style.color = "white";
     layers.style.backgroundColor = "#00395a";
-    infopanel.style.bottom = "-50%";
+    infopanel.style.bottom = "-67%";
 });
 
 
@@ -33,4 +33,9 @@ layers.onclick = function () {
         layers.style.color = "black";
         layers.style.backgroundColor = "white";
     }
+}
+
+function setInfo() {
+    console.log(currentPanel['about']['photo']);
+    document.getElementById("aboutphoto").src = currentPanel['about']['photo'];
 }

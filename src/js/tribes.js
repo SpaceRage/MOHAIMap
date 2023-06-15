@@ -9,7 +9,7 @@ var tribes = {
             desc: "Duwamish Tribe",
             type: "tribe",
             about: {
-                "photo": "../img/tribes/duwamish/main/duwamishmain.png",
+                "photo": "duwamishmain.f4ba586a.png",
                 "blurb": null
             }
         },

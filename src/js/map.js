@@ -27,6 +27,8 @@ function tribalMarker(feature, latlng) {
 var tribeLayer = L.geoJSON(tribes, { pointToLayer: tribalMarker }).addTo(map).on('click', function (e) {
     infopanel.style.bottom = "0";
     console.log(e['layer']['feature']['properties']['name']);
+    currentPanel['about'] = e['layer']['feature']['properties']['about'];
+    setInfo();
 });
 
 function mapChange() {

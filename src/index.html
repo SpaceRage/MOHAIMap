@@ -13,11 +13,31 @@
 
 <body class="bg-twilight">
 
-  <div id="infopanel" class="z-20 fixed h-1/2 w-full -bottom-1/2 p-4 bg-white text-center text-md"></div>
+  <div id="infopanel" class="m-0 z-20 fixed h-1/2 w-full -bottom-2/3 bg-gray-500 text-center text-md">
+    <div class="absolute w-full h-[10%] -top-5 flex flex-row">
+      <div class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-white">
+        <h1>About</h1>
+      </div>
+      <div class="h-full p-2 basis-1/4 rounded-t-2xl bg-gray-500 text-white">
+        <h1>People</h1>
+      </div>
+      <div class="h-full p-2 basis-1/4 rounded-t-2xl bg-gray-500 text-white">
+        <h1>Artifacts</h1>
+      </div>
+      <div class="h-full p-2 basis-1/4 rounded-t-2xl bg-gray-500 text-white">
+        <h1>Exhibit</h1>
+      </div>
+    </div>
+    <div id="about" class="absolute w-full h-full top-5 flex flex-row bg-white">
+      <div>
+        <img id="aboutphoto" src="img\tribes\duwamish\main\duwamishmain.png" class="h-full">
+      </div>
+    </div>
+  </div>
 
   <div id="settings"
     class="z-10 fixed h-full w-[50%] -left-[45%] top-0 p-4 bg-mohai hover:bg-white text-white hover:text-mohai rounded-r-3xl md:rounded-r-[50px] text-center text-md">
-    <h1 class="absolute -rotate-90 inset-y-1/2 -right-[1%] text-4xl tracking-widest align-text-top">
+    <h1 class="absolute -rotate-90 inset-y-1/2 -right-[3%] text-4xl tracking-widest align-text-top">
       SETTINGS</h1>
     <ul class="absolute right-[30%] top-[43%] text-gray-800 text-2xl space-y-2 text-left">
       <li><input id="satellite" type="checkbox" onclick="mapChange()">Satellite</li>
@@ -29,15 +49,15 @@
 
   <div id="layers"
     class="z-10 fixed h-full w-[50%] -right-[45%] top-0 p-4 bg-mohai hover:bg-white text-white hover:text-mohai rounded-l-3xl md:rounded-l-[50px] text-center text-md">
-    <h1 class="absolute rotate-90 inset-y-1/2 left-[1%] text-4xl tracking-widest align-text-bottom">
+    <h1 class="absolute rotate-90 inset-y-1/2 -left-[1%] text-4xl tracking-widest align-text-bottom">
       LAYERS</h1>
   </div>
 
 
   <div id="map" class="z-0"></div>
-  <script src="./js/tribes.js"></script>
-  <script src="./js/map.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="js/tribes.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
 
 
 </body>
