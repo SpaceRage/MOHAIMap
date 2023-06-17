@@ -13,42 +13,54 @@
 
 <body class="bg-twilight">
 
-  <div id="infopanel" class="m-0 z-20 fixed h-1/2 w-full -bottom-2/3 bg-gray-500 text-center text-md">
-    <div class="absolute w-full h-[10%] -top-5 flex flex-row">
+  <div id="infopanel" class="flex flex-col m-0 z-30 fixed h-1/2 w-full -bottom-2/3 bg-none text-center text-md">
+    <div class="w-full flex flex-row ">
       <a id="abouttab" tabindex="0"
-        class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-gray-700 text-white hover:bg-gray-300 focus:bg-white focus:text-black">
+        class="flex h-20 p-2 basis-1/4 rounded-t-2xl justify-center align-middle items-center bg-mohai text-white hover:bg-gray-300 focus:bg-white focus:text-black text-3xl">
         <h1>About</h1>
       </a>
       <a id="peopletab" tabindex="0"
-        class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-gray-700 text-white hover:bg-gray-300 focus:bg-white focus:text-black">
+        class="flex h-20 p-2 basis-1/4 rounded-t-2xl justify-center align-middle items-center bg-mohai text-white hover:bg-gray-300 focus:bg-white focus:text-black text-3xl">
         <h1>People</h1>
       </a>
       <a id="artifactstab" tabindex="0"
-        class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-gray-700 text-white hover:bg-gray-300 focus:bg-white focus:text-black">
+        class="flex h-20 p-2 basis-1/4 rounded-t-2xl justify-center align-middle items-center bg-mohai text-white hover:bg-gray-300 focus:bg-white focus:text-black text-3xl">
         <h1>Artifacts</h1>
       </a>
       <a id="exhibittab" tabindex="0"
-        class="h-full p-2 basis-1/4 rounded-t-2xl align-middle items-center bg-gray-700 text-white hover:bg-gray-300 focus:bg-white focus:text-black">
+        class="flex h-20 p-2 basis-1/4 rounded-t-2xl justify-center align-middle items-center bg-mohai text-white hover:bg-gray-300 focus:bg-white focus:text-black text-3xl">
         <h1>Exhibit</h1>
       </a>
     </div>
-    <div id="about" class="absolute w-full h-full top-5 flex flex-row bg-white">
-      <img id="aboutphoto" src="img\tribes\duwamish\main\duwamishmain.png" class="h-full">
+    <div id="about" class="w-full max-h-full flex flex-row items-center bg-white">
+      <img id="aboutphoto" class="h-full align-middle items-center bg-white text-gray-900" src="#">
+      <div id="aboutinfo" tabindex="0"
+        class="flex flex-col gap-y-[5%] justify-center items-center h-full w-full p-2 text-center bg-white text-gray-900 ">
+        <h1 id="abouttribe" class="text-5xl font-bold">Tribe Name</h1>
+        <p id="abouttribeinfo">Tribe Description</p>
+      </div>
     </div>
-    <div id="people" class="absolute w-full h-full top-5 flex flex-row bg-white">
-      <img id="peoplephoto" src="#" class="h-full">
+    <div id="people" class="w-full h-full flex flex-row items-center bg-white">
+      <img id="peoplephoto" class="h-full align-middle items-center bg-white text-gray-900"
+        src="/src/img/tribes/duwamish/people/chiefseattle.png">
     </div>
-    <div id="artifacts" class="absolute w-full h-full top-5 flex flex-row bg-white">
-      <img id="artifactphoto" src="img\tribes\duwamish\main\duwamishmain.png" class="h-full">
+    <div id="artifacts" class="w-full h-full flex flex-row items-center bg-white">
+      <img id="artifactsphoto" class="h-full align-middle items-center bg-white text-gray-900"
+        src="/src/img/tribes/duwamish/people/chiefseattle.png">
     </div>
-    <div id="exhibit" class="absolute w-full h-full top-5 flex flex-row bg-white">
-      <img id="exhibitphoto" src="#" class="h-full">
+    <div id="exhibit" class="w-full h-full flex flex-row items-center bg-white">
+      <img id="exhibitphoto" class="h-full align-middle items-center bg-white text-gray-900" src="#">
+      <div id="exhibitinfo" tabindex="0" class="h-full w-full p-2 align-middle items-center bg-white text-gray-900 ">
+        <h1>People</h1>
+      </div>
     </div>
   </div>
 
+  <div id="blur" class="z-20 hidden fixed h-full w-full bg-black bg-opacity-50 backdrop-blur-sm"></div>
+
   <div id="settings"
     class="z-10 fixed h-full w-[50%] -left-[45%] top-0 p-4 bg-mohai hover:bg-white text-white hover:text-mohai rounded-r-3xl md:rounded-r-[50px] text-center text-md">
-    <h1 class="absolute -rotate-90 inset-y-1/2 -right-[3%] text-4xl tracking-widest align-text-top">
+    <h1 class="absolute -rotate-90 inset-y-1/2 -right-[2%] text-4xl tracking-widest align-text-top">
       SETTINGS</h1>
     <ul class="absolute right-[30%] top-[43%] text-gray-800 text-2xl space-y-2 text-left">
       <li><input id="satellite" type="checkbox" onclick="mapChange()">Satellite</li>
@@ -60,7 +72,7 @@
 
   <div id="layers"
     class="z-10 fixed h-full w-[50%] -right-[45%] top-0 p-4 bg-mohai hover:bg-white text-white hover:text-mohai rounded-l-3xl md:rounded-l-[50px] text-center text-md">
-    <h1 class="absolute rotate-90 inset-y-1/2 -left-[1%] text-4xl tracking-widest align-text-bottom">
+    <h1 class="absolute rotate-90 inset-y-1/2 -left-[0%] text-4xl tracking-widest align-text-bottom">
       LAYERS</h1>
   </div>
 

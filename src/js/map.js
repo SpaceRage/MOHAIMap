@@ -14,17 +14,18 @@ var satellite = L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/satellite-s
 
 function tribalMarker(feature, latlng) {
     return L.marker(latlng)
-        .bindTooltip("Duwamish", {
+        .bindTooltip(feature['properties']['name'], {
             permanent: true,
             direction: "center",
             className: "my-labels",
-            offset: [-15, 40],
+            offset: [-13, 45],
         })
         .openTooltip();
 
 }
 
 var tribeLayer = L.geoJSON(tribes, { pointToLayer: tribalMarker }).addTo(map).on('click', function (e) {
+    document.getElementById('blur').style.display = "block";
     document.getElementById('abouttab').focus();
     infopanel.style.bottom = "0";
     console.log(e['layer']['feature']['properties']['name']);

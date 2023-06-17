@@ -5,6 +5,11 @@ var currentPanel = {
     "exhibit": null
 }
 
+var blur = document.getElementById('blur');
+blur.onclick = function () {
+    map.fire('click');
+};
+
 map.on('click', function () {
     console.log("Map clicked");
     settings.style.left = "-45%";
@@ -14,6 +19,7 @@ map.on('click', function () {
     layers.style.color = "white";
     layers.style.backgroundColor = "#00395a";
     infopanel.style.bottom = "-67%";
+    blur.style.display = "none";
 });
 
 
@@ -38,6 +44,8 @@ layers.onclick = function () {
 function setInfo() {
     console.log(currentPanel['about']['photo']);
     document.getElementById("aboutphoto").src = currentPanel['about']['photo'];
+    document.getElementById("abouttribe").innerHTML = currentPanel['about']['tribeName'];
+    document.getElementById("abouttribeinfo").innerHTML = currentPanel['about']['tribeDesc'];
 }
 
 // Info panel navigation
@@ -53,13 +61,13 @@ var artifacts = document.getElementById("artifacts");
 var exhibit = document.getElementById("exhibit");
 
 // Default
-about.style.display = "block";
+about.style.display = "flex";
 people.style.display = "none";
 artifacts.style.display = "none";
 exhibit.style.display = "none";
 
 abouttab.onclick = function () {
-    about.style.display = "block";
+    about.style.display = "flex";
     people.style.display = "none";
     artifacts.style.display = "none";
     exhibit.style.display = "none";
@@ -67,7 +75,7 @@ abouttab.onclick = function () {
 
 peopletab.onclick = function () {
     about.style.display = "none";
-    people.style.display = "block";
+    people.style.display = "flex";
     artifacts.style.display = "none";
     exhibit.style.display = "none";
 }
@@ -75,7 +83,7 @@ peopletab.onclick = function () {
 artifactstab.onclick = function () {
     about.style.display = "none";
     people.style.display = "none";
-    artifacts.style.display = "block";
+    artifacts.style.display = "flex";
     exhibit.style.display = "none";
 }
 
@@ -83,5 +91,5 @@ exhibittab.onclick = function () {
     about.style.display = "none";
     people.style.display = "none";
     artifacts.style.display = "none";
-    exhibit.style.display = "block";
+    exhibit.style.display = "flex";
 }
