@@ -12,6 +12,10 @@ var satellite = L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/satellite-s
     attribution: '&copy; <a href="http://www.openstreetmap.org/">OpenStreetMap</a>'
 });
 
+
+
+var tribeAreaLayer = L.geoJSON(tribeareas, { stroke: true, lineJoin: 'round' }).addTo(map);
+
 function tribalMarker(feature, latlng) {
     return L.marker(latlng)
         .bindTooltip(feature['properties']['name'], {
@@ -30,19 +34,11 @@ var tribeLayer = L.geoJSON(tribes, { pointToLayer: tribalMarker }).addTo(map).on
     infopanel.style.bottom = "0";
     console.log(e['layer']['feature']['properties']['name']);
     currentPanel['about'] = e['layer']['feature']['properties']['about'];
+    currentPanel['exhibit'] = e['layer']['feature']['properties']['exhibit'];
     setInfo();
 });
 
-function mapChange() {
-    var checkBox = document.getElementById("satellite");
-    if (checkBox.checked == true) {
-        street.remove();
-        satellite.addTo(map);
-    } else {
-        satellite.remove();
-        street.addTo(map);
-    }
-}
+
 
 
 
