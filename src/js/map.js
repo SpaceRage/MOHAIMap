@@ -32,10 +32,15 @@ var tribeLayer = L.geoJSON(tribes, { pointToLayer: tribalMarker }).addTo(map).on
     document.getElementById('blur').style.display = "block";
     document.getElementById('abouttab').focus();
     infopanel.style.bottom = "0";
+    document.getElementById("about").style.display = "flex";
+    document.getElementById("artifacts").style.display = "none";
+    document.getElementById("exhibit").style.display = "none";
     console.log(e['layer']['feature']['properties']['name']);
     currentPanel['about'] = e['layer']['feature']['properties']['about'];
+    currentPanel['artifacts'] = e['layer']['feature']['properties']['artifacts'];
     currentPanel['exhibit'] = e['layer']['feature']['properties']['exhibit'];
     setInfo();
+
 });
 
 

@@ -44,11 +44,14 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1ipaVXQWXpBsi7U0QIBHi16JtzUhY0Jmq",
+                        "blurb": "The Skagit atlatl, an ancient spear-throwing device, provides an intriguing glimpse into the artistic power, spiritual beliefs and technology of Salish people living in the early years of the first millennium."
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-121.855, 48.5]
@@ -66,11 +69,14 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1ipaVXQWXpBsi7U0QIBHi16JtzUhY0Jmq",
+                        "blurb": "The Skagit atlatl, an ancient spear-throwing device, provides an intriguing glimpse into the artistic power, spiritual beliefs and technology of Salish people living in the early years of the first millennium."
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-122.604, 48.2]
@@ -88,11 +94,14 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1UwXYnfkdrSl8AAaYGU2Ilvv6xUoi9Fku",
+                        "blurb": "Canoes of the stillaguamish tribe were carved from cedar."
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-122.083, 48.212]
@@ -114,7 +123,11 @@ var tribes = {
                         "photo": null,
                         "blurb": null
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-122.190, 48.004]
@@ -136,7 +149,11 @@ var tribes = {
                         "photo": null,
                         "blurb": null
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-121.791, 47.861]
@@ -158,7 +175,11 @@ var tribes = {
                         "photo": null,
                         "blurb": null
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-121.930, 47.648]
@@ -176,11 +197,14 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1cYqWgLbT0Cj7V9ZSKAKF0yC6prlmpbkR",
+                        "blurb": "This canoe is from the south end of Lake Sammamish and made in the late 1890s. It was traded to a settler family that kept it in a barn and cut notches on the side for their paddles and painted it."
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-122.049, 47.574]
@@ -202,7 +226,11 @@ var tribes = {
                         "photo": null,
                         "blurb": null
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-122.738, 47.967]
@@ -220,11 +248,18 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1AAd23-RLS3-1QUTzrEcBheJ7vqt7NoKN",
+                        "blurb": "A photograph of drums used during Intertribal protocols."
+                    },
+                    {
+                        "photo": "1G3bbzx3ptZQU46-h60OwPmzvcYBorHO2",
+                        "blurb": "Carved Canoe made by people of the Jamestown S’klallam tribe."
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-123.197, 48.090]
@@ -242,11 +277,14 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1S09ceJSrAFSEnZMGOEznDby9U7YD_oYb",
+                        "blurb": "Skokomish twined basket of red cedar bark, bear grass, cattail leaf, ca. 1890."
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-123.216, 47.383]
@@ -268,7 +306,11 @@ var tribes = {
                         "photo": null,
                         "blurb": null
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-123.022, 47.061]
@@ -286,11 +328,14 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1_fRkyLrqRZ63etmwUVFmgguLbefQFWuW",
+                        "blurb": "Woven cedar work from the Nisqually tribe."
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-122.702, 47.053]
@@ -308,11 +353,14 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1-WDrbd8wbz_cyJqAXTgNuyVTycXCJD13",
+                        "blurb": "This basket was made by members of the Puyallup Tribe in the early twentieth century. It is part of the Karshner Center's extensive collection of American Indian baskets."
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-122.420, 47.226]
@@ -330,11 +378,18 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1YQLxNW65sjU26lba95oeKQVzSwrpOXg2",
+                        "blurb": "Suquamish Summer Cattail Mat Shelters."
+                    },
+                    {
+                        "photo": "12PX8D_RvOKgJ6GN-B0lN2XBQcscUCBHr",
+                        "blurb": "Suquamish basket weavers weaving baskets."
                     }
-                ]
+                ],
+                exhibit: {
+                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
+                }
             },
             geometry: {
                 type: "Point", coordinates: [-122.613, 47.661]

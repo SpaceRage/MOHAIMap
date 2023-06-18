@@ -5,9 +5,15 @@ var currentPanel = {
 }
 
 var darkModeOn = false;
+var highContrastOn = false;
 
 var blur = document.getElementById('blur');
 blur.onclick = function () {
+    map.fire('click');
+};
+
+var controls = document.getElementById('controls');
+controls.onclick = function () {
     map.fire('click');
 };
 
@@ -30,14 +36,18 @@ settings.onclick = function () {
     layers.style.backgroundColor = "#00395a";
     console.log(settings.style.left);
     if (settings.style.left != "-25%") {
-        if (!darkModeOn) {
+        if (highContrastOn) {
             settings.style.left = "-25%";
-            settings.style.color = "black";
-            settings.style.backgroundColor = "white";
-        } else {
+            settings.style.color = "yellow";
+            settings.style.backgroundColor = "black";
+        } else if (darkModeOn) {
             settings.style.left = "-25%";
             settings.style.color = "white";
             settings.style.backgroundColor = "black";
+        } else {
+            settings.style.left = "-25%";
+            settings.style.color = "black";
+            settings.style.backgroundColor = "white";
         }
     }
 }
@@ -48,14 +58,18 @@ layers.onclick = function () {
     settings.style.backgroundColor = "#00395a";
     console.log(layers.style.right);
     if (layers.style.right != "-25%") {
-        if (!darkModeOn) {
+        if (highContrastOn) {
+            layers.style.right = "-25%";
+            layers.style.color = "yellow";
+            layers.style.backgroundColor = "black";
+        } else if (darkModeOn) {
+            layers.style.left = "-25%";
+            layers.style.color = "white";
+            layers.style.backgroundColor = "black";
+        } else {
             layers.style.right = "-25%";
             layers.style.color = "black";
             layers.style.backgroundColor = "white";
-        } else {
-            layers.style.right = "-25%";
-            layers.style.color = "white";
-            layers.style.backgroundColor = "black";
         }
     }
 }
@@ -66,8 +80,22 @@ function setInfo() {
     document.getElementById("abouttribe").innerHTML = "The " + currentPanel['about']['tribeName'] + " Tribe";
     document.getElementById("abouttribeinfo").innerHTML = currentPanel['about']['tribeDesc'];
 
+    document.getElementById("artifacts").innerHTML = "";
+    if (currentPanel['artifacts'].length != 0) {
+        currentPanel['artifacts'].forEach(function (artifact) {
+            var artifactDiv = document.createElement("div");
+            artifactDiv.className = "h-[85%] flex flex-col justify-center items-center p-6 m-8 space-y-10 bg-mohai text-white rounded-2xl";
+            artifactDiv.innerHTML = "<img class='h-[80%] align-middle items-center' src='https://drive.google.com/uc?export=view&id=" + artifact['photo'] + "'><p>" + artifact['blurb'] + "</p>";
+            document.getElementById("artifacts").appendChild(artifactDiv);
+        });
+    }
+
     document.getElementById("exhibitphoto").src = "https://drive.google.com/uc?export=view&id=" + currentPanel['exhibit']['photo'];
     document.getElementById("exhibitlocation").innerHTML = currentPanel['exhibit']['location'];
+
+    document.getElementById("about").style.display = "flex";
+    document.getElementById("artifacts").style.display = "none";
+    document.getElementById("exhibit").style.display = "none";
 }
 
 // Info panel navigation
@@ -149,6 +177,58 @@ function darkMode() {
         about.style.color = "black";
         artifacts.style.color = "black";
         exhibit.style.color = "black";
+    }
+}
+
+function highContrast() {
+    var highContrastCheckBox = document.getElementById("highcontrast");
+    if (highContrastCheckBox.checked == true) {
+        highContrastOn = true;
+        console.log("high contrast on");
+        // Settings dark mode, since already open
+        settings.style.left = "-10%";
+        settings.style.color = "yellow";
+        settings.style.backgroundColor = "black";
+
+        // Infopanel
+        about.style.backgroundColor = "black";
+        artifacts.style.backgroundColor = "black";
+        exhibit.style.backgroundColor = "black";
+        about.style.color = "yellow";
+        artifacts.style.color = "yellow";
+        exhibit.style.color = "yellow";
+    } else {
+        highContrastOn = false;
+
+        if (darkModeOn) {
+
+            // Settings dark mode, since already open
+            settings.style.left = "-10%";
+            settings.style.color = "white";
+            settings.style.backgroundColor = "black";
+
+            // Infopanel
+            about.style.backgroundColor = "black";
+            artifacts.style.backgroundColor = "black";
+            exhibit.style.backgroundColor = "black";
+            about.style.color = "white";
+            artifacts.style.color = "white";
+            exhibit.style.color = "white";
+        } else {
+
+            // Settings light mode, since already open
+            settings.style.left = "-10%";
+            settings.style.color = "black";
+            settings.style.backgroundColor = "white";
+
+            // Infopanel
+            about.style.backgroundColor = "white";
+            artifacts.style.backgroundColor = "white";
+            exhibit.style.backgroundColor = "white";
+            about.style.color = "black";
+            artifacts.style.color = "black";
+            exhibit.style.color = "black";
+        }
     }
 }
 
