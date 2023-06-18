@@ -63,7 +63,7 @@ layers.onclick = function () {
 function setInfo() {
     console.log(currentPanel);
     document.getElementById("aboutphoto").src = "https://drive.google.com/uc?export=view&id=" + currentPanel['about']['photo'];
-    document.getElementById("abouttribe").innerHTML = currentPanel['about']['tribeName'];
+    document.getElementById("abouttribe").innerHTML = "The " + currentPanel['about']['tribeName'] + " Tribe";
     document.getElementById("abouttribeinfo").innerHTML = currentPanel['about']['tribeDesc'];
 
     document.getElementById("exhibitphoto").src = "https://drive.google.com/uc?export=view&id=" + currentPanel['exhibit']['photo'];
@@ -126,6 +126,14 @@ function darkMode() {
         settings.style.left = "-10%";
         settings.style.color = "white";
         settings.style.backgroundColor = "black";
+
+        // Infopanel
+        about.style.backgroundColor = "black";
+        artifacts.style.backgroundColor = "black";
+        exhibit.style.backgroundColor = "black";
+        about.style.color = "white";
+        artifacts.style.color = "white";
+        exhibit.style.color = "white";
     } else {
         darkModeOn = false;
 
@@ -133,6 +141,14 @@ function darkMode() {
         settings.style.left = "-10%";
         settings.style.color = "black";
         settings.style.backgroundColor = "white";
+
+        // Infopanel
+        about.style.backgroundColor = "white";
+        artifacts.style.backgroundColor = "white";
+        exhibit.style.backgroundColor = "white";
+        about.style.color = "black";
+        artifacts.style.color = "black";
+        exhibit.style.color = "black";
     }
 }
 
