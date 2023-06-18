@@ -1,6 +1,8 @@
-var map = L.map('map', { zoomControls: false }).setView([47.6, -122.3], 9);
+var map = L.map('map', { zoomControl: false }).setView([47.76, -122.448], 9);
 map.setMaxBounds(map.getBounds());
 map.setMinZoom(9);
+
+var narratorOn = false;
 
 var street = L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/dark-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3BhY2VyYWdlIiwiYSI6ImNsN3BxYmw4YzJvYjUzb3F1aGx1b3N5ZGgifQ.9ISon7NubL5Bv-PzYp20eQ`, {
     maxZoom: 19,
@@ -12,9 +14,17 @@ var satellite = L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/satellite-s
     attribution: '&copy; <a href="http://www.openstreetmap.org/">OpenStreetMap</a>'
 });
 
+var languageLayer = L.geoJSON(languages, {
+    onEachFeature: function (feature, layer) {
+        layer.bindTooltip(feature.properties.name, {
+            direction: "center",
+            permanent: true,
+            className: 'my-labels-two'
+        }).openTooltip();
+    }, stroke: true, fillOpacity: 0.4, color: '#990000', lineJoin: 'round'
+}).setZIndex(2);
 
-
-var tribeAreaLayer = L.geoJSON(tribeareas, { stroke: true, lineJoin: 'round' }).addTo(map);
+var tribeAreaLayer = L.geoJSON(tribeareas, { stroke: true, fillOpacity: 0.6, lineJoin: 'round' }).setZIndex(3).addTo(map);
 
 function tribalMarker(feature, latlng) {
     return L.marker(latlng)
@@ -28,7 +38,7 @@ function tribalMarker(feature, latlng) {
 
 }
 
-var tribeLayer = L.geoJSON(tribes, { pointToLayer: tribalMarker }).addTo(map).on('click', function (e) {
+var tribeLayer = L.geoJSON(tribes, { pointToLayer: tribalMarker }).setZIndex(4).addTo(map).on('click', function (e) {
     document.getElementById('blur').style.display = "block";
     document.getElementById('abouttab').focus();
     infopanel.style.bottom = "0";
@@ -40,6 +50,11 @@ var tribeLayer = L.geoJSON(tribes, { pointToLayer: tribalMarker }).addTo(map).on
     currentPanel['artifacts'] = e['layer']['feature']['properties']['artifacts'];
     currentPanel['exhibit'] = e['layer']['feature']['properties']['exhibit'];
     setInfo();
+    window.speechSynthesis.cancel();
+    msg.text = document.getElementById("abouttribe").innerHTML + ". " + document.getElementById("abouttribeinfo").innerHTML;
+    if (narratorOn) {
+        window.speechSynthesis.speak(msg);
+    }
 
 });
 

@@ -20,13 +20,20 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1tUNkkdc6E9sBapR_PpiBTOSUgyf1Cst8",
+                        "blurb": "The Duwamish People are represented by the Killer Whale, the Eagle, and the Raven."
+                    },
+                    {
+                        "photo": "1MaVrOeJwMVUeoFgs8rIwkdPPtpJ48RPC",
+                        "blurb": "Traditional fire-making kit."
+                    },
+                    {
+                        "photo": "18DoHcApBe4DVKYES1bsE4vydigdyk0TS",
+                        "blurb": "This was a dual-purposed carving tool used often to either carve wood and build tools, or cut up the food to be cooked within the kitchen."
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -49,7 +56,7 @@ var tribes = {
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -74,7 +81,7 @@ var tribes = {
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -99,7 +106,7 @@ var tribes = {
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -119,13 +126,12 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1CaXavgpft7P2ZHKDR9S_iU9A2gHKbwR3",
+                        "blurb": "William we ah lup, a Salish man smoking salmon."
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -144,14 +150,9 @@ var tribes = {
                     "tribeDesc": "The Skykomish tribe, also known as the Skykomish Indian Tribe, is a Native American tribe with a rich history rooted in the Pacific Northwest region of the United States. The tribe's ancestral lands encompassed the Skykomish River Valley, situated in present-day Washington State. For centuries, the Skykomish people thrived in harmony with the natural environment, relying on the abundant resources provided by the lush forests, bountiful rivers, and diverse wildlife of the region. They developed a deep spiritual connection to the land, with traditions and customs deeply tied to their natural surroundings. The arrival of European explorers and settlers in the 19th century brought significant changes to the Skykomish tribe's way of life. The signing of treaties with the United States government, including the Point Elliott Treaty of 1855, led to the establishment of reservations and the loss of much of their ancestral lands. Despite the challenges and hardships faced, the Skykomish tribe has persevered, maintaining their cultural heritage and continuing to advocate for their rights, sovereignty, and the preservation of their ancestral lands. Today, the Skykomish tribe strives to foster a strong sense of community, revitalize their traditional practices, and ensure a vibrant future for their people."
                 },
                 artifacts: [
-                    {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
-                    }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -170,14 +171,9 @@ var tribes = {
                     "tribeDesc": "The Snoqualmie Tribe, an indigenous nation from the Pacific Northwest, holds a rich cultural legacy deeply tied to the lands surrounding the Snoqualmie River and the Cascade Mountains in Washington State. For centuries, the Snoqualmie people thrived as skilled hunters, gatherers, and fishermen, relying on the region's abundant natural resources. They embraced a deep spiritual connection to their ancestral lands and maintained a harmonious relationship with the environment. European settlement and forced assimilation policies brought challenges to their way of life, but the Snoqualmie Tribe has demonstrated resilience, preserving their cultural heritage and traditions. Today, they actively engage in cultural revitalization efforts, environmental stewardship, and community development, ensuring the strength and vitality of their people and perpetuating the rich cultural tapestry of the Pacific Northwest."
                 },
                 artifacts: [
-                    {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
-                    }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -202,7 +198,7 @@ var tribes = {
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -222,13 +218,12 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1NHU-5s_Lrg-QDgm6u3WZzQaLIcNsR8e0",
+                        "blurb": "Photograph of a Chimakum woman by Edward S. Curtis."
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -257,7 +252,7 @@ var tribes = {
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -282,7 +277,7 @@ var tribes = {
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -302,13 +297,12 @@ var tribes = {
                 },
                 artifacts: [
                     {
-                        "name": null,
-                        "photo": null,
-                        "blurb": null
+                        "photo": "1VHzjJM01icf508cYMAIxz6j7rvUre38_",
+                        "blurb": "This cedar bough basket was one of several recovered from an ancient Squi-Aitl aquatic resources processing site near the head of Eld Inlet."
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -333,7 +327,7 @@ var tribes = {
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -358,7 +352,7 @@ var tribes = {
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },
@@ -387,7 +381,7 @@ var tribes = {
                     }
                 ],
                 exhibit: {
-                    "photo": "1rVvYX_TFN37pUECJvoVtrL4xjhfcWc4P",
+                    "photo": "171n6AcpbVima3XhCVpajc0-ayqRwn8la",
                     "location": "MOHAI 2nd Floor<br>True Northwest: The Seattle Journey"
                 }
             },

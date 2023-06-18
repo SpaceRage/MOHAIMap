@@ -14,6 +14,25 @@
 
 <body class="bg-twilight">
 
+  <div id="helppanel"
+    class="fixed flex flex-col top-0 left-0 z-50 h-full w-full backdrop-blur-md text-white text-4xl space-y-[5%] text-center p-10 bg-black bg-opacity-40">
+    <img id="helpexit" class="fixed top-[1%] right-[1%] h-[5%] rounded-2xl hover:opacity-[50%] cursor-pointer"
+      src="./img/exit.png" onclick="document.getElementById('helppanel').style.display = 'none'">
+    <h1 class="text-6xl">HELP</h1>
+    <p>Pan around the map to explore.</p>
+    <p>Click on <span class="text-5xl font-['bebas-neue-pro']">Settings</span> to open and toggle between different
+      settings. These will change the state of your map and features of the interface.</p>
+    <p>- If the <span class="text-5xl font-['bebas-neue-pro']">Narrator</span> feature is turned on, text on the info
+      panels will be read out to you through audio. -</p>
+    <p>Click on <span class="text-5xl font-['bebas-neue-pro']">Layers</span> to open and toggle between different
+      layers. These will stack features onto the map.</p>
+    <p>Click on a tribal marker to open a panel with detailed information, media, and exhibit location of the tribe
+      located within the <span class="text-5xl font-['bebas-neue-pro']">About</span>, <span
+        class="text-5xl font-['bebas-neue-pro']">Media</span>, and <span
+        class="text-5xl font-['bebas-neue-pro']">Exhibit</span> tabs.</p>
+
+  </div>
+
   <div id="infopanel" class="flex flex-col m-0 z-40 fixed h-1/2 w-full -bottom-2/3 bg-none text-center text-md">
     <div class="w-full flex flex-row ">
       <a id="abouttab" tabindex="0"
@@ -22,7 +41,7 @@
       </a>
       <a id="artifactstab" tabindex="0"
         class="flex h-20 p-2 basis-1/3 rounded-t-2xl justify-center align-middle items-center bg-mohai text-white hover:bg-gray-300 focus:bg-white focus:text-black text-3xl">
-        <h1>Artifacts</h1>
+        <h1>Media</h1>
       </a>
       <a id="exhibittab" tabindex="0"
         class="flex h-20 p-2 basis-1/3 rounded-t-2xl justify-center align-middle items-center bg-mohai text-white hover:bg-gray-300 focus:bg-white focus:text-black text-3xl">
@@ -58,11 +77,11 @@
     class="z-20 fixed h-[98%] w-[50%] -left-[45%] top-[1%] p-4 bg-mohai hover:bg-white text-white hover:text-mohai darkMode:bg-black rounded-r-3xl md:rounded-r-[50px] text-center text-md">
     <h1 class="absolute -rotate-90 inset-y-1/2 -right-[2%] text-4xl tracking-widest align-text-top">
       SETTINGS</h1>
-    <ul class="absolute right-[30%] top-[43%] text-2xl space-y-4 text-left">
+    <ul class="absolute -translate-y-1/2 right-[20%] top-[50%] text-2xl space-y-4 text-left">
       <li><input id="satellite" type="checkbox" onclick="mapChange()">Satellite</li>
       <li><input id="darkmode" type="checkbox" onclick="darkMode()">Dark Mode</li>
       <li><input id="highcontrast" type="checkbox" onclick="highContrast()">High Contrast</li>
-      <li><input type="checkbox">Global Narration</li>
+      <li><input id="narrator" type="checkbox" onclick="narrator()">Narrator</li>
     </ul>
   </div>
 
@@ -70,23 +89,32 @@
     class="z-20 fixed h-[98%] w-[50%] -right-[45%] top-[1%] p-4 bg-mohai hover:bg-white text-white hover:text-mohai rounded-l-3xl md:rounded-l-[50px] text-center text-md">
     <h1 class="absolute rotate-90 inset-y-1/2 -left-[0%] text-4xl tracking-widest align-text-bottom">
       LAYERS</h1>
-    <ul class="absolute left-[30%] top-[44.5%] text-2xl space-y-4 text-right">
+    <ul class="absolute -translate-y-1/2 left-[20%] top-[50%] text-2xl space-y-4 text-right">
       <li>Tribes<input id="tribes" type="checkbox" onclick="tribeToggle()" checked></li>
       <li>Tribal Areas<input id="tribalareas" type="checkbox" onclick="tribalAreasToggle()" checked></li>
-      <li>Languages<input id="languages" type="checkbox"></li>
+      <li>Languages<input id="languages" type="checkbox" onclick="languagesToggle()"></li>
     </ul>
   </div>
 
   <div id="controls"
-    class="z-10 fixed flex h-[10%] w-[25%] left-[6%] top-[1%] p-4 bg-mohai text-white rounded-3xl md:rounded-[50px] text-center text-md content-center justify-center items-center align-middle">
-    <h1 class="text-4xl tracking-widest">
+    class="z-10 fixed flex left-[6%] top-[1%] p-4 bg-mohai text-white text-4xl rounded-3xl md:rounded-[40px] space-x-6 text-center text-md content-center justify-center items-center align-middle">
+    <div id="zoom" class="bg-white rounded-3xl">
+      <img src="img/plus.png" onclick="map.zoomIn()" class="h-12 w-12 opacity-50 hover:opacity-100 cursor-pointer">
+      <img src="img/minus.png" onclick="map.zoomOut()" class="h-12 w-12 opacity-50 hover:opacity-100 cursor-pointer">
+    </div>
+    <h1 class="text-6xl tracking-widest">
       MOHAI</h1>
+    <p class="text-2xl">True Northwest | Map</p>
   </div>
+
+  <img id="help" class="z-10 fixed flex right-[6%] top-[1%] h-[5%] rounded-2xl hover:opacity-[50%] cursor-pointer"
+    src="img/help.png" onclick="help()">
 
 
   <div id="map" class="z-0"></div>
   <script src="js/tribes.js"></script>
   <script src="js/tribeareas.js"></script>
+  <script src="js/languages.js"></script>
   <script src="js/map.js"></script>
   <script src="js/main.js"></script>
 

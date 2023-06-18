@@ -1,3 +1,5 @@
+window.speechSynthesis.cancel();
+
 var currentPanel = {
     "about": null,
     "artifacts": null,
@@ -5,6 +7,7 @@ var currentPanel = {
 }
 
 var darkModeOn = false;
+
 var highContrastOn = false;
 
 var blur = document.getElementById('blur');
@@ -18,6 +21,7 @@ controls.onclick = function () {
 };
 
 map.on('click', function () {
+    window.speechSynthesis.cancel();
     console.log("Map clicked");
     settings.style.left = "-45%";
     settings.style.color = "white";
@@ -108,27 +112,40 @@ var about = document.getElementById("about");
 var artifacts = document.getElementById("artifacts");
 var exhibit = document.getElementById("exhibit");
 
+var msg = new SpeechSynthesisUtterance();
+
 // Default
 about.style.display = "flex";
 artifacts.style.display = "none";
 exhibit.style.display = "none";
 
 abouttab.onclick = function () {
+
     about.style.display = "flex";
     artifacts.style.display = "none";
     exhibit.style.display = "none";
+    msg.text = document.getElementById("abouttribe").innerHTML + ". " + document.getElementById("abouttribeinfo").innerHTML;
+    if (narratorOn) {
+        window.speechSynthesis.speak(msg);
+    }
 }
 
 artifactstab.onclick = function () {
+    window.speechSynthesis.cancel();
     about.style.display = "none";
     artifacts.style.display = "flex";
     exhibit.style.display = "none";
 }
 
 exhibittab.onclick = function () {
+    window.speechSynthesis.cancel();
     about.style.display = "none";
     artifacts.style.display = "none";
     exhibit.style.display = "flex";
+    msg.text = "Located at " + document.getElementById("exhibitlocation").innerHTML
+    if (narratorOn) {
+        window.speechSynthesis.speak(msg);
+    }
 }
 
 
@@ -232,11 +249,21 @@ function highContrast() {
     }
 }
 
+function narrator() {
+    var narratorCheckBox = document.getElementById("narrator");
+    if (narratorCheckBox.checked == true) {
+        narratorOn = true;
+    } else {
+        narratorOn = false;
+        window.speechSynthesis.cancel();
+    }
+}
+
 // LAYERS
 function tribeToggle() {
     var tribeCheckBox = document.getElementById("tribes");
     if (tribeCheckBox.checked == true) {
-        tribeLayer.addTo(map);
+        tribeLayer.addTo(map).setZIndex(2);
     } else {
         tribeLayer.remove();
     }
@@ -245,8 +272,27 @@ function tribeToggle() {
 function tribalAreasToggle() {
     var tribeAreaCheckBox = document.getElementById("tribalareas");
     if (tribeAreaCheckBox.checked == true) {
-        tribeAreaLayer.addTo(map);
+        tribeAreaLayer.addTo(map).setZIndex(3);
     } else {
         tribeAreaLayer.remove();
+    }
+}
+
+function languagesToggle() {
+    var languageCheckBox = document.getElementById("languages");
+    if (languageCheckBox.checked == true) {
+        languageLayer.addTo(map).setZIndex(4).bringToBack();
+    } else {
+        languageLayer.remove();
+    }
+}
+
+// HELP
+function help() {
+    window.speechSynthesis.cancel();
+    document.getElementById("helppanel").style.display = "flex";
+    if (narratorOn) {
+        msg.text = document.getElementById("helppanel").textContent;
+        window.speechSynthesis.speak(msg);
     }
 }
