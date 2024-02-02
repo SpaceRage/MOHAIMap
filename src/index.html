@@ -9,27 +9,31 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-search/3.0.9/leaflet-search.min.js"
+    integrity="sha512-erNK0f3PSiL/SdS247MoOAK95iJCmfueXT4WG5eyRBR1eOgcE0bI5y2fSEVTQfAS53pTqL/VIQpJXnG99U1n+A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
 <body class="bg-twilight">
 
   <div id="helppanel"
-    class="fixed flex flex-col top-0 left-0 z-50 h-full w-full backdrop-blur-md text-white text-4xl space-y-[5%] text-center p-10 bg-black bg-opacity-40">
+    class="fixed flex flex-col top-0 left-0 z-50 h-full w-full backdrop-blur-md text-white text-[150%] space-y-[2%] text-center p-10 bg-black bg-opacity-40">
     <img id="helpexit" class="fixed top-[1%] right-[1%] h-[5%] rounded-2xl hover:opacity-[50%] cursor-pointer"
       src="./img/exit.png" onclick="document.getElementById('helppanel').style.display = 'none'">
-    <h1 class="text-6xl">HELP</h1>
+    <h1 class="text-8xl">HELP</h1>
+    <br><br><br><br>
     <p>Pan around the map to explore.</p>
-    <p>Click on <span class="text-5xl font-['bebas-neue-pro']">Settings</span> to open and toggle between different
+    <p>Click on <span class="text-[200%] font-['bebas-neue-pro']">Settings</span> to open and toggle between different
       settings. These will change the state of your map and features of the interface.</p>
-    <p>- If the <span class="text-5xl font-['bebas-neue-pro']">Narrator</span> feature is turned on, text on the info
+    <p>- If the <span class="text-[200%] font-['bebas-neue-pro']">Narrator</span> feature is turned on, text on the info
       panels will be read out to you through audio. -</p>
-    <p>Click on <span class="text-5xl font-['bebas-neue-pro']">Layers</span> to open and toggle between different
+    <p>Click on <span class="text-[200%] font-['bebas-neue-pro']">Layers</span> to open and toggle between different
       layers. These will stack features onto the map.</p>
     <p>Click on a tribal marker to open a panel with detailed information, media, and exhibit location of the tribe
-      located within the <span class="text-5xl font-['bebas-neue-pro']">About</span>, <span
-        class="text-5xl font-['bebas-neue-pro']">Media</span>, and <span
-        class="text-5xl font-['bebas-neue-pro']">Exhibit</span> tabs.</p>
+      located within the <span class="text-[200%] font-['bebas-neue-pro']">About</span>, <span
+        class="text-[200%] font-['bebas-neue-pro']">Media</span>, and <span
+        class="text-[200%] font-['bebas-neue-pro']">Exhibit</span> tabs.</p>
 
   </div>
 
@@ -49,14 +53,16 @@
       </a>
     </div>
     <div id="about" class="w-full h-[90%] flex flex-row items-center bg-white text-gray-900">
-      <img id="aboutphoto" class="h-full align-middle items-center " src="#">
+      <img id="aboutphoto" class="h-full w-1/2 align-top items-center " src="#">
       <div id="aboutinfo" tabindex="0"
-        class="flex flex-col gap-y-[3%] justify-center items-center h-full w-full p-3 text-justify">
+        class="flex flex-col gap-y-[3%] justify-left items-center overflow-y-scroll h-[90%] w-full p-3 text-justify">
         <h1 id="abouttribe" class="text-7xl font-bold">Tribe Name</h1>
+        <div id="tribelinks" class="flex-col text-center text-blue-600"></div>
         <p id="abouttribeinfo" class="max-w-[80%]">Tribe Description</p>
       </div>
     </div>
-    <div id="artifacts" class="w-full h-[90%] flex flex-row items-center bg-white">
+    <div id="artifacts"
+      class="w-full h-[90%] flex flex-row flex-wrap justify-center items-center bg-white overflow-y-scroll">
     </div>
     <div id="exhibit" class="w-full h-full flex flex-row items-center bg-white">
       <img id="exhibitphoto" class="h-full align-middle items-center " src="#">
@@ -65,7 +71,8 @@
         <h1>Located at</h1>
         <p class="text-3xl" id="exhibitlocation"></p>
         <a id="exhibitticker" class="text-3xl bg-mohai p-8 text-white rounded-3xl hover:bg-blue-700"
-          href="https://3365.blackbaudhosting.com/3365/page.aspx?pid=196&tab=2&txobjid=7a2c0933-eabb-4951-845e-3903816348bc">Buy
+          href="https://3365.blackbaudhosting.com/3365/page.aspx?pid=196&tab=2&txobjid=7a2c0933-eabb-4951-845e-3903816348bc"
+          target="_blank" rel="noopener noreferrer">Buy
           Tickets</a>
       </div>
     </div>
@@ -78,10 +85,10 @@
     <h1 class="absolute -rotate-90 inset-y-1/2 -right-[2%] text-4xl tracking-widest align-text-top">
       SETTINGS</h1>
     <ul class="absolute -translate-y-1/2 right-[20%] top-[50%] text-2xl space-y-4 text-left">
-      <li><input id="satellite" type="checkbox" onclick="mapChange()">Satellite</li>
-      <li><input id="darkmode" type="checkbox" onclick="darkMode()">Dark Mode</li>
-      <li><input id="highcontrast" type="checkbox" onclick="highContrast()">High Contrast</li>
-      <li><input id="narrator" type="checkbox" onclick="narrator()">Narrator</li>
+      <li><input id="satellite" type="checkbox" onclick="mapChange()"> Satellite</li>
+      <li><input id="darkmode" type="checkbox" onclick="darkMode()"> Dark Mode</li>
+      <li><input id="highcontrast" type="checkbox" onclick="highContrast()"> High Contrast</li>
+      <li><input id="narrator" type="checkbox" onclick="narrator()"> Narrator</li>
     </ul>
   </div>
 
@@ -90,9 +97,10 @@
     <h1 class="absolute rotate-90 inset-y-1/2 -left-[0%] text-4xl tracking-widest align-text-bottom">
       LAYERS</h1>
     <ul class="absolute -translate-y-1/2 left-[20%] top-[50%] text-2xl space-y-4 text-right">
-      <li>Tribes<input id="tribes" type="checkbox" onclick="tribeToggle()" checked></li>
-      <li>Tribal Areas<input id="tribalareas" type="checkbox" onclick="tribalAreasToggle()" checked></li>
-      <li>Languages<input id="languages" type="checkbox" onclick="languagesToggle()"></li>
+      <li>Tribes <input id="tribes" type="checkbox" onclick="tribeToggle()" checked></li>
+      <li>Historic Tribal Ranges <input id="tribalareas" type="checkbox" onclick="tribalAreasToggle()" checked></li>
+      <li>Languages <input id="languages" type="checkbox" onclick="languagesToggle()"></li>
+      <li>Reservations <input id="reservations" type="checkbox" onclick="reservationsToggle()"></li>
     </ul>
   </div>
 
@@ -107,6 +115,13 @@
     <p class="text-2xl">True Northwest | Map</p>
   </div>
 
+  <a href="https://mohai.org">
+    <div id="backtomohai"
+      class="z-10 fixed flex left-[6%] top-[175px] p-4 bg-mohai border border-mohai text-white hover:bg-black hover:border-white transition-all duration-500 text-4xl rounded-3xl md:rounded-[40px] space-x-6 text-center text-md content-center justify-center items-center align-middle">
+      <p class="text-lg">⮘ Back to MOHAI</p>
+    </div>
+  </a>
+
   <img id="help" class="z-10 fixed flex right-[6%] top-[1%] h-[5%] rounded-2xl hover:opacity-[50%] cursor-pointer"
     src="img/help.png" onclick="help()">
 
@@ -115,6 +130,7 @@
   <script src="js/tribes.js"></script>
   <script src="js/tribeareas.js"></script>
   <script src="js/languages.js"></script>
+  <script src="js/reservations.js"></script>
   <script src="js/map.js"></script>
   <script src="js/main.js"></script>
 

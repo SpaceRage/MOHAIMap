@@ -22,6 +22,16 @@ var languageLayer = L.geoJSON(languages, {
             className: 'my-labels-two'
         }).openTooltip();
     }, stroke: true, fillOpacity: 0.4, color: '#990000', lineJoin: 'round'
+}).setZIndex(3);
+
+var reservationLayer = L.geoJSON(reservations, {
+    onEachFeature: function (feature, layer) {
+        layer.bindTooltip(feature.properties.name + " Reservation", {
+            direction: "center",
+            permanent: true,
+            className: 'my-labels-three'
+        }).openTooltip();
+    }, stroke: true, fillOpacity: 0.4, color: '#ebd234', lineJoin: 'round'
 }).setZIndex(2);
 
 var tribeAreaLayer = L.geoJSON(tribeareas, { stroke: true, fillOpacity: 0.6, lineJoin: 'round' }).setZIndex(3).addTo(map);
@@ -46,6 +56,7 @@ var tribeLayer = L.geoJSON(tribes, { pointToLayer: tribalMarker }).setZIndex(4).
     document.getElementById("artifacts").style.display = "none";
     document.getElementById("exhibit").style.display = "none";
     console.log(e['layer']['feature']['properties']['name']);
+    currentPanel['links'] = e['layer']['feature']['properties']['link'];
     currentPanel['about'] = e['layer']['feature']['properties']['about'];
     currentPanel['artifacts'] = e['layer']['feature']['properties']['artifacts'];
     currentPanel['exhibit'] = e['layer']['feature']['properties']['exhibit'];

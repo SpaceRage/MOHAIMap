@@ -1,6 +1,7 @@
 window.speechSynthesis.cancel();
 
 var currentPanel = {
+    "links": null,
     "about": null,
     "artifacts": null,
     "exhibit": null
@@ -67,7 +68,7 @@ layers.onclick = function () {
             layers.style.color = "yellow";
             layers.style.backgroundColor = "black";
         } else if (darkModeOn) {
-            layers.style.left = "-25%";
+            layers.style.right = "-25%";
             layers.style.color = "white";
             layers.style.backgroundColor = "black";
         } else {
@@ -83,6 +84,13 @@ function setInfo() {
     document.getElementById("aboutphoto").src = "https://drive.google.com/uc?export=view&id=" + currentPanel['about']['photo'];
     document.getElementById("abouttribe").innerHTML = "The " + currentPanel['about']['tribeName'] + " Tribe";
     document.getElementById("abouttribeinfo").innerHTML = currentPanel['about']['tribeDesc'];
+
+    document.getElementById("tribelinks").innerHTML = "";
+    if (currentPanel['links'].length != 0) {
+        currentPanel['links'].forEach(function (link) {
+            document.getElementById("tribelinks").innerHTML += "<a class='underline' href='" + link + "' target='_blank'>" + link + "</a><br>";
+        });
+    }
 
     document.getElementById("artifacts").innerHTML = "";
     if (currentPanel['artifacts'].length != 0) {
@@ -263,7 +271,7 @@ function narrator() {
 function tribeToggle() {
     var tribeCheckBox = document.getElementById("tribes");
     if (tribeCheckBox.checked == true) {
-        tribeLayer.addTo(map).setZIndex(2);
+        tribeLayer.addTo(map).setZIndex(1);
     } else {
         tribeLayer.remove();
     }
@@ -272,7 +280,7 @@ function tribeToggle() {
 function tribalAreasToggle() {
     var tribeAreaCheckBox = document.getElementById("tribalareas");
     if (tribeAreaCheckBox.checked == true) {
-        tribeAreaLayer.addTo(map).setZIndex(3);
+        tribeAreaLayer.addTo(map).setZIndex(2);
     } else {
         tribeAreaLayer.remove();
     }
@@ -284,6 +292,15 @@ function languagesToggle() {
         languageLayer.addTo(map).setZIndex(4).bringToBack();
     } else {
         languageLayer.remove();
+    }
+}
+
+function reservationsToggle() {
+    var reservationCheckBox = document.getElementById("reservations");
+    if (reservationCheckBox.checked == true) {
+        reservationLayer.addTo(map).setZIndex(3).bringToBack();
+    } else {
+        reservationLayer.remove();
     }
 }
 
